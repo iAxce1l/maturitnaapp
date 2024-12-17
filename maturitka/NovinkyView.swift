@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AkcieView: View {
+struct NovinkyView: View {
     var body: some View {
         VStack {
-            Text("Welcome to Akcie")
+            Text("Welcome to Novinky")
                 .font(.title)
                 .padding()
         }

@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		DF1268A02D06133E009FDEEF /* maturitkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF12689F2D06133E009FDEEF /* maturitkaApp.swift */; };
-		DF1268A22D06133E009FDEEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268A12D06133E009FDEEF /* ContentView.swift */; };
+		DF1268A22D06133E009FDEEF /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268A12D06133E009FDEEF /* MainContentView.swift */; };
 		DF1268A42D06133E009FDEEF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268A32D06133E009FDEEF /* Item.swift */; };
 		DF1268A62D06133F009FDEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF1268A52D06133F009FDEEF /* Assets.xcassets */; };
 		DF1268A92D06133F009FDEEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF1268A82D06133F009FDEEF /* Preview Assets.xcassets */; };
 		DF1268B32D06133F009FDEEF /* maturitkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268B22D06133F009FDEEF /* maturitkaTests.swift */; };
 		DF1268BD2D06133F009FDEEF /* maturitkaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268BC2D06133F009FDEEF /* maturitkaUITests.swift */; };
 		DF1268BF2D06133F009FDEEF /* maturitkaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268BE2D06133F009FDEEF /* maturitkaUITestsLaunchTests.swift */; };
+		DF579E132D0F2C29005C5D04 /* DomovView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E122D0F2C29005C5D04 /* DomovView.swift */; };
+		DF579E152D0F2C42005C5D04 /* NovinkyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E142D0F2C42005C5D04 /* NovinkyView.swift */; };
+		DF579E172D0F2C52005C5D04 /* KalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E162D0F2C52005C5D04 /* KalendarView.swift */; };
+		DF579E192D0F2C64005C5D04 /* MapaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E182D0F2C64005C5D04 /* MapaView.swift */; };
+		DF579E1B2D0F2C71005C5D04 /* KontaktView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,7 @@
 /* Begin PBXFileReference section */
 		DF12689C2D06133E009FDEEF /* maturitka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maturitka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF12689F2D06133E009FDEEF /* maturitkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maturitkaApp.swift; sourceTree = "<group>"; };
-		DF1268A12D06133E009FDEEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF1268A12D06133E009FDEEF /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		DF1268A32D06133E009FDEEF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DF1268A52D06133F009FDEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF1268A82D06133F009FDEEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -46,6 +51,11 @@
 		DF1268B82D06133F009FDEEF /* maturitkaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = maturitkaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1268BC2D06133F009FDEEF /* maturitkaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maturitkaUITests.swift; sourceTree = "<group>"; };
 		DF1268BE2D06133F009FDEEF /* maturitkaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maturitkaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DF579E122D0F2C29005C5D04 /* DomovView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomovView.swift; sourceTree = "<group>"; };
+		DF579E142D0F2C42005C5D04 /* NovinkyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovinkyView.swift; sourceTree = "<group>"; };
+		DF579E162D0F2C52005C5D04 /* KalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KalendarView.swift; sourceTree = "<group>"; };
+		DF579E182D0F2C64005C5D04 /* MapaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaView.swift; sourceTree = "<group>"; };
+		DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KontaktView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +106,13 @@
 		DF12689E2D06133E009FDEEF /* maturitka */ = {
 			isa = PBXGroup;
 			children = (
+				DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */,
+				DF579E182D0F2C64005C5D04 /* MapaView.swift */,
+				DF579E162D0F2C52005C5D04 /* KalendarView.swift */,
+				DF579E142D0F2C42005C5D04 /* NovinkyView.swift */,
+				DF579E122D0F2C29005C5D04 /* DomovView.swift */,
 				DF12689F2D06133E009FDEEF /* maturitkaApp.swift */,
-				DF1268A12D06133E009FDEEF /* ContentView.swift */,
+				DF1268A12D06133E009FDEEF /* MainContentView.swift */,
 				DF1268A32D06133E009FDEEF /* Item.swift */,
 				DF1268A52D06133F009FDEEF /* Assets.xcassets */,
 				DF1268A72D06133F009FDEEF /* Preview Content */,
@@ -260,9 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF1268A22D06133E009FDEEF /* ContentView.swift in Sources */,
+				DF579E172D0F2C52005C5D04 /* KalendarView.swift in Sources */,
+				DF579E192D0F2C64005C5D04 /* MapaView.swift in Sources */,
+				DF1268A22D06133E009FDEEF /* MainContentView.swift in Sources */,
+				DF579E1B2D0F2C71005C5D04 /* KontaktView.swift in Sources */,
 				DF1268A42D06133E009FDEEF /* Item.swift in Sources */,
+				DF579E132D0F2C29005C5D04 /* DomovView.swift in Sources */,
 				DF1268A02D06133E009FDEEF /* maturitkaApp.swift in Sources */,
+				DF579E152D0F2C42005C5D04 /* NovinkyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

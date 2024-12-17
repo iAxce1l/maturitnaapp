@@ -7,40 +7,44 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var isMenuOpen = false // State to toggle the menu
-    
+struct MainContentView: View {
     var body: some View {
-        NavigationView {
-            ZStack {
-                // Main Content
-
-                // Side Menu (Slide-in from the left)
-                HStack {
-                    SideMenuView()
-                        .offset(x: isMenuOpen ? 0 : -250) // Menu moves in/out from left
-                        .animation(.easeInOut(duration: 0.3), value: isMenuOpen) // Slide-in effect
-                    Spacer()
+        // TabView - bottom bar sluziaci ako menu
+        TabView {
+            // Domov
+            DomovView()
+                .tabItem {
+                    Label("Domov", systemImage: "house")
                 }
-            }
-            .navigationBarTitle("Maturitka Menu", displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {
-                // Toggle Menu
-                withAnimation {
-                    isMenuOpen.toggle()
+            
+            // Akcie
+            NovinkyView()
+                .tabItem {
+                    Label("Novinky", systemImage: "star.fill")
                 }
-            }) {
-                Image(systemName: "line.horizontal.3")
-                    .resizable()
-                    .frame(width: 24, height: 18)
-                    .foregroundColor(.black)
-            })
+            
+            // Kalendar
+            KalendarView()
+                .tabItem {
+                    Label("Kalendar", systemImage: "calendar")
+                }
+            
+            // Mapa
+            MapaView()
+                .tabItem {
+                    Label("Mapa", systemImage: "map")
+                }
+            
+            // Kontakt
+            KontaktView()
+                .tabItem {
+                    Label("Kontakt", systemImage: "phone.fill")
+                }
         }
+        .accentColor(.blue) // Farba na selectnutu poloyku
     }
 }
 
-
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+    MainContentView()
 }
