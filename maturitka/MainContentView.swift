@@ -18,9 +18,9 @@ struct MainContentView: View {
                 }
             
             // Akcie
-            NovinkyView()
+            AkcieView()
                 .tabItem {
-                    Label("Novinky", systemImage: "star.fill")
+                    Label("Akcie", systemImage: "star.fill")
                 }
             
             // Kalendar

@@ -16,10 +16,15 @@
 		DF1268BD2D06133F009FDEEF /* maturitkaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268BC2D06133F009FDEEF /* maturitkaUITests.swift */; };
 		DF1268BF2D06133F009FDEEF /* maturitkaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268BE2D06133F009FDEEF /* maturitkaUITestsLaunchTests.swift */; };
 		DF579E132D0F2C29005C5D04 /* DomovView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E122D0F2C29005C5D04 /* DomovView.swift */; };
-		DF579E152D0F2C42005C5D04 /* NovinkyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E142D0F2C42005C5D04 /* NovinkyView.swift */; };
+		DF579E152D0F2C42005C5D04 /* AkcieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E142D0F2C42005C5D04 /* AkcieView.swift */; };
 		DF579E172D0F2C52005C5D04 /* KalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E162D0F2C52005C5D04 /* KalendarView.swift */; };
 		DF579E192D0F2C64005C5D04 /* MapaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E182D0F2C64005C5D04 /* MapaView.swift */; };
 		DF579E1B2D0F2C71005C5D04 /* KontaktView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */; };
+		DF5FC4AE2D13480E007F9965 /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC4AD2D13480E007F9965 /* BlogPost.swift */; };
+		DF5FC4B02D13482C007F9965 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC4AF2D13482C007F9965 /* APIService.swift */; };
+		DF5FC4B22D13483F007F9965 /* BlogPostPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC4B12D13483F007F9965 /* BlogPostPreviewView.swift */; };
+		DF5FC4B42D134855007F9965 /* BlogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC4B32D134855007F9965 /* BlogDetailView.swift */; };
+		DF5FC4B62D134BAD007F9965 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC4B52D134BAD007F9965 /* Landmark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +57,15 @@
 		DF1268BC2D06133F009FDEEF /* maturitkaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maturitkaUITests.swift; sourceTree = "<group>"; };
 		DF1268BE2D06133F009FDEEF /* maturitkaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maturitkaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DF579E122D0F2C29005C5D04 /* DomovView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomovView.swift; sourceTree = "<group>"; };
-		DF579E142D0F2C42005C5D04 /* NovinkyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovinkyView.swift; sourceTree = "<group>"; };
+		DF579E142D0F2C42005C5D04 /* AkcieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkcieView.swift; sourceTree = "<group>"; };
 		DF579E162D0F2C52005C5D04 /* KalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KalendarView.swift; sourceTree = "<group>"; };
 		DF579E182D0F2C64005C5D04 /* MapaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaView.swift; sourceTree = "<group>"; };
 		DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KontaktView.swift; sourceTree = "<group>"; };
+		DF5FC4AD2D13480E007F9965 /* BlogPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
+		DF5FC4AF2D13482C007F9965 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DF5FC4B12D13483F007F9965 /* BlogPostPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostPreviewView.swift; sourceTree = "<group>"; };
+		DF5FC4B32D134855007F9965 /* BlogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailView.swift; sourceTree = "<group>"; };
+		DF5FC4B52D134BAD007F9965 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,14 +116,19 @@
 		DF12689E2D06133E009FDEEF /* maturitka */ = {
 			isa = PBXGroup;
 			children = (
-				DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */,
-				DF579E182D0F2C64005C5D04 /* MapaView.swift */,
-				DF579E162D0F2C52005C5D04 /* KalendarView.swift */,
-				DF579E142D0F2C42005C5D04 /* NovinkyView.swift */,
-				DF579E122D0F2C29005C5D04 /* DomovView.swift */,
-				DF12689F2D06133E009FDEEF /* maturitkaApp.swift */,
+				DF5FC4B32D134855007F9965 /* BlogDetailView.swift */,
+				DF5FC4B12D13483F007F9965 /* BlogPostPreviewView.swift */,
+				DF5FC4AF2D13482C007F9965 /* APIService.swift */,
+				DF5FC4AD2D13480E007F9965 /* BlogPost.swift */,
 				DF1268A12D06133E009FDEEF /* MainContentView.swift */,
+				DF579E122D0F2C29005C5D04 /* DomovView.swift */,
+				DF579E142D0F2C42005C5D04 /* AkcieView.swift */,
+				DF579E162D0F2C52005C5D04 /* KalendarView.swift */,
+				DF579E182D0F2C64005C5D04 /* MapaView.swift */,
+				DF5FC4B52D134BAD007F9965 /* Landmark.swift */,
+				DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */,
 				DF1268A32D06133E009FDEEF /* Item.swift */,
+				DF12689F2D06133E009FDEEF /* maturitkaApp.swift */,
 				DF1268A52D06133F009FDEEF /* Assets.xcassets */,
 				DF1268A72D06133F009FDEEF /* Preview Content */,
 			);
@@ -275,14 +290,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5FC4B62D134BAD007F9965 /* Landmark.swift in Sources */,
+				DF5FC4B22D13483F007F9965 /* BlogPostPreviewView.swift in Sources */,
+				DF5FC4B42D134855007F9965 /* BlogDetailView.swift in Sources */,
 				DF579E172D0F2C52005C5D04 /* KalendarView.swift in Sources */,
 				DF579E192D0F2C64005C5D04 /* MapaView.swift in Sources */,
 				DF1268A22D06133E009FDEEF /* MainContentView.swift in Sources */,
+				DF5FC4AE2D13480E007F9965 /* BlogPost.swift in Sources */,
 				DF579E1B2D0F2C71005C5D04 /* KontaktView.swift in Sources */,
 				DF1268A42D06133E009FDEEF /* Item.swift in Sources */,
+				DF5FC4B02D13482C007F9965 /* APIService.swift in Sources */,
 				DF579E132D0F2C29005C5D04 /* DomovView.swift in Sources */,
 				DF1268A02D06133E009FDEEF /* maturitkaApp.swift in Sources */,
-				DF579E152D0F2C42005C5D04 /* NovinkyView.swift in Sources */,
+				DF579E152D0F2C42005C5D04 /* AkcieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

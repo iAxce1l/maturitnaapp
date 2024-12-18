@@ -1,16 +1,9 @@
-//
-//  AkcieView.swift
-//  maturitka
-//
-//  Created by Maturitka on 15/12/2024.
-//
-
 import SwiftUI
 
-struct NovinkyView: View {
+struct AkcieView: View {
     var body: some View {
         VStack {
-            Text("Welcome to Novinky")
+            Text("Novinky")
                 .font(.title)
                 .padding()
         }

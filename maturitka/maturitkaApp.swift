@@ -1,10 +1,3 @@
-//
-//  maturitkaApp.swift
-//  maturitka
-//
-//  Created by Maturitka on 08/12/2024.
-//
-
 import SwiftUI
 
 @main
