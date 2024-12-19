@@ -15,6 +15,7 @@
 		DF1268B32D06133F009FDEEF /* maturitkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268B22D06133F009FDEEF /* maturitkaTests.swift */; };
 		DF1268BD2D06133F009FDEEF /* maturitkaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268BC2D06133F009FDEEF /* maturitkaUITests.swift */; };
 		DF1268BF2D06133F009FDEEF /* maturitkaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1268BE2D06133F009FDEEF /* maturitkaUITestsLaunchTests.swift */; };
+		DF5602792D14C0390065360C /* ElegantCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = DF5602782D14C0390065360C /* ElegantCalendar */; };
 		DF579E132D0F2C29005C5D04 /* DomovView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E122D0F2C29005C5D04 /* DomovView.swift */; };
 		DF579E152D0F2C42005C5D04 /* AkcieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E142D0F2C42005C5D04 /* AkcieView.swift */; };
 		DF579E172D0F2C52005C5D04 /* KalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E162D0F2C52005C5D04 /* KalendarView.swift */; };
@@ -73,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5602792D14C0390065360C /* ElegantCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +178,9 @@
 			dependencies = (
 			);
 			name = maturitka;
+			packageProductDependencies = (
+				DF5602782D14C0390065360C /* ElegantCalendar */,
+			);
 			productName = maturitka;
 			productReference = DF12689C2D06133E009FDEEF /* maturitka.app */;
 			productType = "com.apple.product-type.application";
@@ -248,6 +253,10 @@
 				Base,
 			);
 			mainGroup = DF1268932D06133E009FDEEF;
+			packageReferences = (
+				DF5602772D14C0390065360C /* XCRemoteSwiftPackageReference "ElegantCalendar" */,
+				DF56027A2D14C2D90065360C /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = DF12689D2D06133E009FDEEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -632,6 +641,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF5602772D14C0390065360C /* XCRemoteSwiftPackageReference "ElegantCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ThasianX/ElegantCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.2;
+			};
+		};
+		DF56027A2D14C2D90065360C /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF5602782D14C0390065360C /* ElegantCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF5602772D14C0390065360C /* XCRemoteSwiftPackageReference "ElegantCalendar" */;
+			productName = ElegantCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF1268942D06133E009FDEEF /* Project object */;
 }

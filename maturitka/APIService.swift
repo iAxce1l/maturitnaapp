@@ -4,7 +4,7 @@ class APIService: ObservableObject {
     @Published var blogPosts: [BlogPost] = []
     
     func fetchPosts() {
-        guard let url = URL(string: "TUTREBADATURLCKO") else { return }
+        guard let url = URL(string: "TUTREBADATURLCKO!!!!") else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {

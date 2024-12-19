@@ -15,7 +15,7 @@ struct DomovView: View {
                         .fontWeight(.bold)
                         .padding(.leading)
                     
-                    // Nahladovky blogov
+                    // Nahladovky 
                     ForEach(apiService.blogPosts) { post in
                         Button(action: {
                             selectedPost = post
