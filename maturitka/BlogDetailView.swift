@@ -6,8 +6,8 @@ struct BlogDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                // Fotka
-                AsyncImage(url: URL(string: post.image_url)) { image in
+                // Image
+                AsyncImage(url: URL(string: "http://192.168.1.12:1337" + post.attributes.image.url)) { image in
                     image.resizable()
                         .scaledToFill()
                         .frame(height: 300)
@@ -16,19 +16,34 @@ struct BlogDetailView: View {
                     Color.gray.opacity(0.3).frame(height: 300)
                 }
 
-                // Nazov
-                Text(post.title)
+                // Title
+                Text(post.attributes.title)
                     .font(.largeTitle)
                     .fontWeight(.bold)
 
-                // Obash
-                Text(post.content)
+                // Content
+                Text(post.attributes.content)
                     .font(.body)
                     .padding(.top, 10)
+
+                // Publication Date
+                Text("Published on: \(formattedDate(post.attributes.publishedAt))")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
             }
             .padding()
         }
         .navigationTitle("Blog Detail")
     }
-}
 
+    // Helper function to format date
+    func formattedDate(_ dateString: String) -> String {
+        let isoFormatter = ISO8601DateFormatter()
+        if let date = isoFormatter.date(from: dateString) {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            return formatter.string(from: date)
+        }
+        return "Unknown date"
+    }
+}

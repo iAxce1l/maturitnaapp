@@ -5,8 +5,8 @@ struct BlogPostPreviewView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            // fotka
-            AsyncImage(url: URL(string: post.image_url)) { image in
+            // Image
+            AsyncImage(url: URL(string: "http://192.168.1.12:1337" + post.attributes.image.url)) { image in
                 image.resizable()
                     .scaledToFill()
                     .frame(height: 150)
@@ -15,8 +15,8 @@ struct BlogPostPreviewView: View {
                 Color.gray.opacity(0.3).frame(height: 150)
             }
 
-            // nazov
-            Text(post.title)
+            // Title
+            Text(post.attributes.title)
                 .font(.headline)
                 .foregroundColor(.primary)
                 .lineLimit(2)
