@@ -23,7 +23,7 @@ struct KontaktView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 DisclosureGroup(
-                    isExpanded: $isAdresaExpanded, // Rozbalenie sekcie
+                    isExpanded: $isAdresaExpanded,
                     content: {
                         VStack(alignment: .leading, spacing: 5) {
                             Text("OBEC SMÍŽANY")
@@ -674,14 +674,14 @@ struct ContactRow: View {
     var body: some View {
         HStack {
             Image(systemName: icon)
-                .foregroundColor(.black)
+                .foregroundColor(.primary)
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 Link(destination: URL(string: link)!) {
                     Text(value)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .underline()
                 }
             }
@@ -692,8 +692,6 @@ struct ContactRow: View {
 }
 
 
-
-// Zmenit zelenu farbičku na svetlomodru, vladko odporučil :)
 #Preview {
     MainContentView()
 }

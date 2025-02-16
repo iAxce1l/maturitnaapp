@@ -1,49 +1,51 @@
 import SwiftUI
 
+// View ktoré zobrazuje detail blogu - detail screen
 struct BlogDetailView: View {
+    // Property pre držanie dát blog postu
     let post: BlogPost
 
+    // Main view builder - tu definujeme layout
     var body: some View {
+        // Scrollovateľný kontajner pre content
         ScrollView {
+            // Vertical stack s leadingom a spacingom 20
             VStack(alignment: .leading, spacing: 20) {
-                // Image
-                AsyncImage(url: URL(string: "http://192.168.1.12:1337" + post.attributes.image.url)) { image in
-                    image.resizable()
-                        .scaledToFill()
-                        .frame(height: 300)
-                        .cornerRadius(10)
-                } placeholder: {
-                    Color.gray.opacity(0.3).frame(height: 300)
+                // Optional chaining - checkujeme či máme image a jeho URL
+                if let image = post.image?.first, let imageUrl = image.formats?.large?.url ?? image.formats?.medium?.url {
+                    // Async loading obrázku z API endpointu
+                    AsyncImage(url: URL(string: "http://192.168.1.12:1337" + imageUrl)) { image in
+                        // Image view s responzívnymi vlastnostami
+                        image.resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity)
+                            .cornerRadius(10)
+                    } placeholder: {
+                        // Placeholder view kým sa image loaduje
+                        Color.gray.opacity(0.3)
+                            .frame(height: 200)
+                            .cornerRadius(10)
+                    }
                 }
 
-                // Title
-                Text(post.attributes.title)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                // Iterujeme cez content blocky
+                ForEach(post.content, id: \.type) { block in
+                    // Nested loop pre text children v každom blocku
+                    ForEach(block.children, id: \.text) { text in
+                        // Renderujeme text content
+                        Text(text.text)
+                            .font(.body)
+                            .foregroundColor(.primary)
+                            .padding(.bottom, 10)
+                    }
+                }
 
-                // Content
-                Text(post.attributes.content)
-                    .font(.body)
-                    .padding(.top, 10)
-
-                // Publication Date
-                Text("Published on: \(formattedDate(post.attributes.publishedAt))")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+                // Spacer na konci stacku
+                Spacer()
             }
             .padding()
         }
-        .navigationTitle("Blog Detail")
-    }
-
-    // Helper function to format date
-    func formattedDate(_ dateString: String) -> String {
-        let isoFormatter = ISO8601DateFormatter()
-        if let date = isoFormatter.date(from: dateString) {
-            let formatter = DateFormatter()
-            formatter.dateStyle = .medium
-            return formatter.string(from: date)
-        }
-        return "Unknown date"
+        // Nastavíme title v navigation bare
+        .navigationTitle(post.title)
     }
 }

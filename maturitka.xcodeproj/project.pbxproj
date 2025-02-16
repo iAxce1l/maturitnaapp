@@ -21,6 +21,8 @@
 		DF579E172D0F2C52005C5D04 /* KalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E162D0F2C52005C5D04 /* KalendarView.swift */; };
 		DF579E192D0F2C64005C5D04 /* MapaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E182D0F2C64005C5D04 /* MapaView.swift */; };
 		DF579E1B2D0F2C71005C5D04 /* KontaktView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */; };
+		DF5A5EE02D6131CF00A2B8A7 /* KalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A5EDF2D6131CF00A2B8A7 /* KalendarEvent.swift */; };
+		DF5DC84A2D6263CB001C0249 /* NovinkyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5DC8492D6263CB001C0249 /* NovinkyItem.swift */; };
 		DF5FC4AE2D13480E007F9965 /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC4AD2D13480E007F9965 /* BlogPost.swift */; };
 		DF5FC4B02D13482C007F9965 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC4AF2D13482C007F9965 /* APIService.swift */; };
 		DF5FC4B22D13483F007F9965 /* BlogPostPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC4B12D13483F007F9965 /* BlogPostPreviewView.swift */; };
@@ -62,6 +64,8 @@
 		DF579E162D0F2C52005C5D04 /* KalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KalendarView.swift; sourceTree = "<group>"; };
 		DF579E182D0F2C64005C5D04 /* MapaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaView.swift; sourceTree = "<group>"; };
 		DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KontaktView.swift; sourceTree = "<group>"; };
+		DF5A5EDF2D6131CF00A2B8A7 /* KalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KalendarEvent.swift; sourceTree = "<group>"; };
+		DF5DC8492D6263CB001C0249 /* NovinkyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovinkyItem.swift; sourceTree = "<group>"; };
 		DF5FC4AD2D13480E007F9965 /* BlogPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
 		DF5FC4AF2D13482C007F9965 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DF5FC4B12D13483F007F9965 /* BlogPostPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostPreviewView.swift; sourceTree = "<group>"; };
@@ -118,17 +122,19 @@
 		DF12689E2D06133E009FDEEF /* maturitka */ = {
 			isa = PBXGroup;
 			children = (
-				DF5FC4B32D134855007F9965 /* BlogDetailView.swift */,
-				DF5FC4B12D13483F007F9965 /* BlogPostPreviewView.swift */,
 				DF5FC4AF2D13482C007F9965 /* APIService.swift */,
+				DF5DC8492D6263CB001C0249 /* NovinkyItem.swift */,
+				DF5A5EDF2D6131CF00A2B8A7 /* KalendarEvent.swift */,
 				DF5FC4AD2D13480E007F9965 /* BlogPost.swift */,
 				DF1268A12D06133E009FDEEF /* MainContentView.swift */,
+				DF5FC4B12D13483F007F9965 /* BlogPostPreviewView.swift */,
+				DF5FC4B32D134855007F9965 /* BlogDetailView.swift */,
 				DF579E122D0F2C29005C5D04 /* DomovView.swift */,
 				DF579E142D0F2C42005C5D04 /* AkcieView.swift */,
 				DF579E162D0F2C52005C5D04 /* KalendarView.swift */,
 				DF579E182D0F2C64005C5D04 /* MapaView.swift */,
-				DF5FC4B52D134BAD007F9965 /* Landmark.swift */,
 				DF579E1A2D0F2C71005C5D04 /* KontaktView.swift */,
+				DF5FC4B52D134BAD007F9965 /* Landmark.swift */,
 				DF1268A32D06133E009FDEEF /* Item.swift */,
 				DF12689F2D06133E009FDEEF /* maturitkaApp.swift */,
 				DF1268A52D06133F009FDEEF /* Assets.xcassets */,
@@ -303,6 +309,7 @@
 				DF5FC4B22D13483F007F9965 /* BlogPostPreviewView.swift in Sources */,
 				DF5FC4B42D134855007F9965 /* BlogDetailView.swift in Sources */,
 				DF579E172D0F2C52005C5D04 /* KalendarView.swift in Sources */,
+				DF5A5EE02D6131CF00A2B8A7 /* KalendarEvent.swift in Sources */,
 				DF579E192D0F2C64005C5D04 /* MapaView.swift in Sources */,
 				DF1268A22D06133E009FDEEF /* MainContentView.swift in Sources */,
 				DF5FC4AE2D13480E007F9965 /* BlogPost.swift in Sources */,
@@ -310,6 +317,7 @@
 				DF1268A42D06133E009FDEEF /* Item.swift in Sources */,
 				DF5FC4B02D13482C007F9965 /* APIService.swift in Sources */,
 				DF579E132D0F2C29005C5D04 /* DomovView.swift in Sources */,
+				DF5DC84A2D6263CB001C0249 /* NovinkyItem.swift in Sources */,
 				DF1268A02D06133E009FDEEF /* maturitkaApp.swift in Sources */,
 				DF579E152D0F2C42005C5D04 /* AkcieView.swift in Sources */,
 			);

@@ -1,43 +1,36 @@
 import SwiftUI
 
+// Hlavný view pre domovskú obrazovku
 struct DomovView: View {
-    @StateObject private var apiService = APIService()
-    @State private var selectedPost: BlogPost? = nil
-    @State private var showDetailView = false
-    
-    var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    // Header
-                    Text("Príspevky")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding(.leading)
-                    
-                    // Nahladovky 
-                    ForEach(apiService.blogPosts) { post in
-                        Button(action: {
-                            selectedPost = post
-                            showDetailView.toggle()
-                        }) {
-                            BlogPostPreviewView(post: post)
-                        }
-                    }
-                }
-                .onAppear {
-                    apiService.fetchPosts()
-                }
-            }
-            .sheet(isPresented: $showDetailView) {
-                if let post = selectedPost {
-                    BlogDetailView(post: post)
-                }
-            }
-        }
-    }
-}
+   // StateObject pre API service - zabezpečuje data fetching
+   @StateObject private var apiService = APIService()
 
-#Preview {
-    MainContentView()
+   // Main view builder
+   var body: some View {
+       // Navigation wrapper pre push/pop navigáciu
+       NavigationView {
+           // Vertical stack ako root container
+           VStack {
+               // Subview pre zobrazenie preview blog postov
+               // Injectujeme API service ako dependency
+               BlogPostPreviewView(apiService: apiService)
+           }
+           // Inline style pre navigation bar
+           .navigationBarTitleDisplayMode(.inline)
+           // Custom toolbar pre header
+           .toolbar {
+               // Centrovaný title v navigation bare
+               ToolbarItem(placement: .principal) {
+                   Text("Domov")
+                       .font(.largeTitle)
+                       .fontWeight(.bold)
+                       .frame(maxWidth: .infinity, alignment: .center)
+               }
+           }
+           // Lifecycle hook - fetchneme data pri zobrazení screenu
+           .onAppear {
+               apiService.fetchBlogPosts()
+           }
+       }
+   }
 }

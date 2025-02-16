@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  maturitka
-//
-//  Created by Maturitka on 08/12/2024.
-//
-
 import SwiftUI
 
 struct MainContentView: View {
@@ -17,10 +10,10 @@ struct MainContentView: View {
                     Label("Domov", systemImage: "house")
                 }
             
-            // Akcie
+            // Aktuality
             AkcieView()
                 .tabItem {
-                    Label("Akcie", systemImage: "star.fill")
+                    Label("Aktuality", systemImage: "star.fill")
                 }
             
             // Kalendar
@@ -41,7 +34,7 @@ struct MainContentView: View {
                     Label("Kontakt", systemImage: "phone.fill")
                 }
         }
-        .accentColor(.blue) // Farba na selectnutu poloyku
+        .accentColor(.blue) // Farba na selectnutu položku
     }
 }
 
