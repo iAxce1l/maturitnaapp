@@ -20,7 +20,9 @@ struct KontaktView: View {
     @State private var isTechnickaPrevadzkaExpanded = false
     
     var body: some View {
+        NavigationView {
         ScrollView {
+            
             VStack(alignment: .leading, spacing: 20) {
                 DisclosureGroup(
                     isExpanded: $isAdresaExpanded,
@@ -643,8 +645,16 @@ struct KontaktView: View {
             }
             .padding()
         }
-        .navigationTitle("Kontakt")
-        .background(Color(UIColor.systemGroupedBackground))
+        .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            Text("Kontakt")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                        }
+                    }
+        }
     }
 }
 
@@ -690,6 +700,7 @@ struct ContactRow: View {
         .padding(.vertical, 5)
     }
 }
+
 
 
 #Preview {
