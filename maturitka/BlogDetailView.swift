@@ -29,16 +29,19 @@ struct BlogDetailView: View {
                 }
 
                 // Iterujeme cez content blocky
-                ForEach(post.content, id: \.type) { block in
-                    // Nested loop pre text children v každom blocku
-                    ForEach(block.children, id: \.text) { text in
-                        // Renderujeme text content
-                        Text(text.text)
-                            .font(.body)
-                            .foregroundColor(.primary)
-                            .padding(.bottom, 10)
-                    }
-                }
+                ForEach(post.content.indices, id: \.self) { blockIndex in
+                                    let block = post.content[blockIndex]
+                                    ForEach(block.children.indices, id: \.self) { childIndex in
+                                        let text = block.children[childIndex].text
+                                        // Zobrazíme text len ak nie je prázdny
+                                        if !text.isEmpty {
+                                            Text(text)
+                                                .font(.body)
+                                                .foregroundColor(.primary)
+                                                .padding(.bottom, 5)
+                                        }
+                                    }
+                                }
 
                 // Spacer na konci stacku
                 Spacer()
