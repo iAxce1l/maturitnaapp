@@ -12,38 +12,54 @@ struct MapaView: View {
    )
    
    // Array landmarkov/pinov na mape
-   let landmarks = [
-       Landmark(title: "Test",
-               coordinate: CLLocationCoordinate2D(latitude: 48.95654, longitude: 20.52242),
-               subtitle: "Testik")
-   ]
+    let landmarks = [
+            Landmark(title: "Obecný úrad",
+                     coordinate: CLLocationCoordinate2D(latitude: 48.95842, longitude: 20.51788),
+                    subtitle: ""),
+            
+            Landmark(title: "Ihrisko",
+                     coordinate: CLLocationCoordinate2D(latitude: 48.95605, longitude: 20.52465),
+                    subtitle: ""),
+            
+            Landmark(title: "Zberný dvor",
+                     coordinate: CLLocationCoordinate2D(latitude: 48.95715, longitude: 20.51226),
+                    subtitle: ""),
+            
+            Landmark(title: "Kultúrny dom",
+                     coordinate: CLLocationCoordinate2D(latitude: 48.95476, longitude: 20.52270),
+                    subtitle: "Katarínske posedenie"),
+            
+            Landmark(title: "Železničná stanica",
+                     coordinate: CLLocationCoordinate2D(latitude: 48.95335, longitude: 20.52309),
+                    subtitle: "")
+        ]
+    
 
    // Main view builder
-   var body: some View {
-       // Map view s počiatočnou pozíciou
-       Map(initialPosition: .region(region)) {
-           // Iterujeme cez landmarky a vytvárame anotácie
-           ForEach(landmarks) { landmark in
-               // Custom anotácia pre každý landmark
-               Annotation(landmark.title, coordinate: landmark.coordinate) {
-                   // Vertical stack pre pin a label
-                   VStack {
-                       // Custom pin ikona
-                       Image(systemName: "mappin.circle.fill")
-                           .resizable()
-                           .frame(width: 30, height: 30)
-                           .foregroundColor(.red)
-                       // Label pod pinom
-                       Text(landmark.title)
-                           .font(.caption)
-                           .padding(5)
-                           .background(Color.white)
-                           .cornerRadius(5)
-                           .shadow(radius: 5)
-                   }
-               }
-           }
-       }
+    var body: some View {
+            Map(initialPosition: .region(region)) {
+                ForEach(landmarks) { landmark in
+                    Annotation("", coordinate: landmark.coordinate) {
+                        VStack {
+                            Image(systemName: "mappin.circle.fill")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(.red)
+                            VStack(spacing: 2) {
+                                Text(landmark.title)
+                                    .font(.caption)
+                                    .fontWeight(.medium)
+                                if let subtitle = landmark.subtitle {
+                                    Text(subtitle)
+                                        .font(.caption2)
+                                        .foregroundColor(.gray)
+                                }
+                            }
+                            .padding(2)
+                        }
+                    }
+                }
+            }
        // Pridanie buttonov
        .mapControls {
            MapUserLocationButton() // Button pre lokalizáciu užívateľa
